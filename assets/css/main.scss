@@ -2,6 +2,8 @@ $primary : #3176DE;
 $itemBackground: #F6F9FE;
 $ctaBackground: #FDBE83;
 $ctaText: #FFFFFF;
+$background: #F6F9FE;
+$neutral500: #2F4258;
 
 html, body {
     font-size: 16px;
@@ -11,92 +13,255 @@ html, body {
     margin: 0;
 }
 
-section, header, footer {
-    max-width: 600px;
-    margin: 0 auto;
+.containerIndex{
+    display: flex;
+    @media screen and (max-width: 860px) {flex-direction: column;}
 }
 
-header {
+
+.containerValidation{
     display: flex;
     align-items: center;
-    margin-top: 86px;
+    background-color: $background;
+    max-width: 100%;
+    height: 100%;
 
-    h1{
-        color: $primary;
-        font-size: 28px;
-        margin: 0;
+    img{
+        max-width: 600px;
+        margin: 0 auto;
     }
 
-    a {
-        margin-left: auto;
-        color: #DE3131;
-        text-decoration: underline;
-    }
-}
-
-section{
-
-    &.content {
+    div{
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        margin: 30px auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
 
         p{
-            margin: 20px 0px 0px 0px;
-            color: #696969;
+            font-size: 40px;
         }
+
+        button{
+            cursor: pointer;
+            background-color: $ctaBackground;
+            color: $itemBackground;
+            border: 0;
+            padding: 5px 20px;
+            font-size: 25px;
+        }
+
     }
 
-    &.list {
-        max-width: 400px;
+}
 
-        .l-item{
-            align-items: center;
-            background-color: $itemBackground;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
+main{
+    background-color: $itemBackground;
 
-            .li-header{
+    section, footer{
+        margin: 0 auto;
+    }
+    
+    section.form, footer {
+        max-width: 600px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    
+    section{
+    
+        &.header{
+            max-width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 85px;
+    
+            .square{
+                background-color: #CFFEDF;
+                width: 176px;
+                height: 176px;
+                margin: 15px;
+                @media screen and (max-width: 1020px) AND (min-width: 860px){
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+            
+        &.form{
+            
+            .item {
                 display: flex;
-                margin-bottom: 10px;
-                h3{
-                    font-weight: bold;
-                    margin: 0;
-                    font-size: 18px;
-                    color: #344058;
-                }
-
-                p{
-                    margin-left: auto;
-                    color: $primary;
-                }
+                margin-bottom: 24px;
             }
-
-            p{
-                margin: 0;
+    
+            .itemsRow {
+                display: flex;
             }
+    
+            #item1{
+                flex-direction: column;
+            }
+    
+            #item2{
+                flex-direction: column;
+                margin-right: 30px;
+            }
+    
+            #item3{
+                flex-direction: column;
+            }
+    
+            #item4{
+                flex-direction: column;
+            }
+        }
+    
+    }
 
+    select{
+        cursor: pointer;
+    }
+    
+    select, input {
+        height: 46px;
+        font-size: 16px;
+        font-style: $neutral500;
+        margin-top: 7px;
+        border-color: #E9F0FB;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    ::placeholder{
+        color:$neutral500;
+    }
+    
+    footer{
+        display: flex;
+        align-items: center;
+        p{
+            font-size: 30px;
+        }
+    
+        button{
+            cursor: pointer;
+            margin-left: auto;
+            border: 1;
+            border-color: $primary;
+            padding: 5px 20px;
+            font-size: 25px;
+            color: $primary;
+            background-color: $background;
+            border-style: solid;
         }
     }
 }
 
-footer{
-    display: flex;
-    align-items: center;
-    p{
-        color: $primary;
-        font-weight: bold;
-        font-size: 30px;
-    }
+aside{
 
-    button{
-        margin-left: auto;
-        background-color: $ctaBackground;
-        color: $itemBackground;
-        border: 0;
-        padding: 5px 20px;
-        font-size: 25px;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    section, header, footer {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        margin-top: 125px;
+    
+        h1{
+            color: $primary;
+            font-size: 28px;
+            margin: 0;
+        }
+    
+        a {
+            cursor: pointer;
+            margin-left: auto;
+            color: #DE3131;
+            text-decoration: underline;
+        }
+    }
+    
+    section{
+    
+        &.content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 30px auto;
+    
+            p{
+                margin: 20px 0px 0px 0px;
+                color: #696969;
+            }
+        }
+    
+        &.list {
+            max-width: 400px;
+    
+            .l-item{
+                align-items: center;
+                background-color: $itemBackground;
+                padding: 10px 20px;
+                margin: 10px;
+                border-radius: 5px;
+    
+                .li-header{
+                    display: flex;
+                    margin-bottom: 10px;
+                    h3{
+                        font-weight: bold;
+                        margin: 0;
+                        font-size: 18px;
+                        color: #344058;
+                    }
+    
+                    p{
+                        margin-left: auto;
+                        color: $primary;
+                    }
+                }
+    
+                p{
+                    margin: 0;
+                }
+    
+            }
+        }
+    }
+    
+    footer{
+        display: flex;
+        align-items: center;
+        p{
+            color: $primary;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        a{
+            display: contents;
+            text-decoration: none;
+        }
+    
+        button{
+            cursor: pointer;
+            margin-left: auto;
+            background-color: $ctaBackground;
+            color: $itemBackground;
+            border: 0;
+            padding: 5px 20px;
+            font-size: 25px;
+        }
     }
 }
+
+

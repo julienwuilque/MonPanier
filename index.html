@@ -7,40 +7,110 @@
         <title>Mon panier</title>
     </head>
     <body>
-        <header class="title">
-            <h1>Mon panier</h1>
-            <a>Vider le panier</a>
-        </header>
-        <section class="content">
-            <img src="assets/images/image.webp">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit malesuada nec odio et urna, risus. Magna blandit cras iaculis volutpat quisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </section>
-        <section class="list">
-            <div class="l-item" id="item1">
-                <div class="li-header">
-                    <h3>Article 1</h3>
-                    <p>2.55$</p>
-                </div>
-                <p class="li-text">1x Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="l-item" id="item2">
-                <div class="li-header">
-                    <h3>Article 2</h3>
-                    <p>2.55$</p>
-                </div>
-                <p class="li-text">1x Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="l-item" id="item3">
-                <div class="li-header">
-                    <h3>Article 3</h3>
-                    <p>2.55$</p>
-                </div>
-                <p class="li-text">1x Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </section>
-        <footer>
-            <p>154$</p>
-            <button>Valide mon panier</button>
-        </footer>
+        <div class="containerIndex">
+            <main>
+                <section class="header">
+                    <div class="square">
+
+                    </div>
+                    <div class="square">
+
+                    </div>
+                    <div class="square">
+
+                    </div>
+                    <div class="square">
+
+                    </div>
+                    <div class="square">
+
+                    </div>
+                    <div class="square">
+
+                    </div>
+                </section>
+                <section class="form">
+                    <form>
+                        <div class="item" id="item1">
+                            <label for="product">Produit</label>
+                            <select name="product">
+                                <option>Choisir un produit à ajouter au panier</option>
+                                <option>Chaussures</option>
+                                <option>Pantalon</option>
+                                <option>T-shirt</option>
+                                <option>Sweat</option>
+                            </select>
+                        </div>
+                        <div class="itemsRow">
+                            <div class="item" id="item2">
+                                <label for="size">Taille</label>
+                                <select name="size">
+                                    <option>XS</option>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                            <div class="item" id="item3">
+                                <label for="color">Couleur</label>
+                                <select name="color">
+                                    <option>Rouge</option>
+                                    <option>Vert</option>
+                                    <option>Jaune</option>
+                                    <option>Bleu</option>
+                                    <option>Violet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item" id="item4">
+                            <label for="comment">Commentaire</label>
+                            <input type="text" placeholder="Ajouter un commentaire" name="comment">
+                        </div>
+                    </form>
+                </section>
+                <footer>
+                    <p>34.99$</p>
+                    <button>+ Ajouter au panier</button>
+                </footer>
+            </main>
+            <aside>
+                <header class="title">
+                    <h1>Mon panier</h1>
+                    <a>Vider le panier</a>
+                </header>
+                <section class="content">
+                    <img src="assets/images/image.webp">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit malesuada nec odio et urna, risus. Magna blandit cras iaculis volutpat quisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </section>
+                <section class="list">
+                    <div class="l-item" id="item1">
+                        <div class="li-header">
+                            <h3>Article 1</h3>
+                            <p>2.55$</p>
+                        </div>
+                        <p class="li-text">1x Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="l-item" id="item2">
+                        <div class="li-header">
+                            <h3>Article 2</h3>
+                            <p>2.55$</p>
+                        </div>
+                        <p class="li-text">1x Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="l-item" id="item3">
+                        <div class="li-header">
+                            <h3>Article 3</h3>
+                            <p>2.55$</p>
+                        </div>
+                        <p class="li-text">1x Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </section>
+                <footer>
+                    <p>154$</p>
+                        <a href="./validation.html"><button type="submit">Valide mon panier</button></a>
+                </footer>
+            </aside>
+        </div>
     </body>
 </html>
