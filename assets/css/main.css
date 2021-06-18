@@ -29,16 +29,48 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #F6F9FE;
-  max-width: 100%;
-  height: 100%;
+  min-height: 100%;
+}
+
+@media screen and (max-width: 1020px) {
+  .containerValidation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .containerValidation img {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 30 auto;
 }
 
-.containerValidation div {
+.containerValidation div.items {
+  padding: auto;
+  margin-bottom: 20px;
+}
+
+.containerValidation div.items .squares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containerValidation div.items .squares .square {
+  background-color: #CFFEDF;
+  width: 176px;
+  height: 176px;
+  margin: 15px;
+}
+
+.containerValidation div.items .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,11 +87,11 @@ html, body {
   margin: 0 auto;
 }
 
-.containerValidation div p {
+.containerValidation div.items .item p {
   font-size: 40px;
 }
 
-.containerValidation div button {
+.containerValidation div.items .item button {
   cursor: pointer;
   background-color: #FDBE83;
   color: #F6F9FE;
