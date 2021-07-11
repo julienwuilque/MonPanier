@@ -33,7 +33,7 @@
                     <form>
                         <div class="item" id="item1">
                             <label for="product">Produit</label>
-                            <select name="product">
+                            <select id= "productName" name="product">
                                 <option>Choisir un produit à ajouter au panier</option>
                                 <option>Chaussures</option>
                                 <option>Pantalon</option>
@@ -44,7 +44,7 @@
                         <div class="itemsRow">
                             <div class="item" id="item2">
                                 <label for="size">Taille</label>
-                                <select name="size">
+                                <select id="productSize" name="size">
                                     <option>XS</option>
                                     <option>S</option>
                                     <option>M</option>
@@ -54,7 +54,7 @@
                             </div>
                             <div class="item" id="item3">
                                 <label for="color">Couleur</label>
-                                <select name="color">
+                                <select id="productColor" name="color">
                                     <option>Rouge</option>
                                     <option>Vert</option>
                                     <option>Jaune</option>
@@ -65,13 +65,13 @@
                         </div>
                         <div class="item" id="item4">
                             <label for="comment">Commentaire</label>
-                            <input type="text" placeholder="Ajouter un commentaire" name="comment">
+                            <input id="productDescription" type="text" placeholder="Ajouter un commentaire" name="comment">
                         </div>
                     </form>
                 </section>
                 <footer>
                     <p>34.99$</p>
-                    <button>+ Ajouter au panier</button>
+                    <button onclick="ajouter()">+ Ajouter au panier</button>
                 </footer>
             </main>
             <aside>
@@ -83,7 +83,7 @@
                     <img src="assets/images/image.webp">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit malesuada nec odio et urna, risus. Magna blandit cras iaculis volutpat quisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </section>
-                <section class="list">
+                <section id="list" class="list">
                     <div class="l-item" id="item1">
                         <div class="li-header">
                             <h3>Article 1</h3>
@@ -113,4 +113,13 @@
             </aside>
         </div>
     </body>
+    <script>
+        function ajouter(){
+            var productName = document.getElementById("productName").value;
+            var productSize = document.getElementById("productSize").value;
+            var productColor = document.getElementById("productColor").value;
+            var productDescription = document.getElementById("productDescription").value;
+            document.getElementById("list").innerHTML = document.getElementById("list").innerHTML + '<div class="l-item" id="item1"><div class="li-header"><h3>'+ productName +'</h3><p>2.55$</p></div><p class="li-text">1x '+ productName + ', ' + productSize + ', ' + productColor +'</p></div>';
+        }
+    </script>
 </html>
